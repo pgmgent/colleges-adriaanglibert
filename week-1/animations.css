@@ -1,0 +1,36 @@
+:root {
+  --size: 8rem;
+  --primary-color: hsl(159, 100%, 25%);
+  --secondary-color: hsl(240, 100%, 50%);
+  --tertiary-color: hsl(350, 100%, 88%);
+}
+
+.box {
+  margin-bottom: 1rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary-color);
+  animation: boxAnimation 10s linear 0s infinite alternate paused;
+  // 10s duration, 0s delay, 1 of infinite iteration
+  // forwards is de fill mode, dit wil zeggen dat de animatie op 100% of het laatste keyframe blijft.
+  // Alternate reverse = op het eind terugkeren van 100 naar 0.
+  // Paused is zeggen dat het gepauzeerd is bij het starten.
+}
+
+.box--playing {
+  animation-play-state: running;
+}
+
+@keyframes boxAnimation {
+  0%,
+  20% {
+    background-color: var(--primary-color);
+  }
+  50%,
+  75% {
+    background-color: var(--secondary-color);
+  }
+  100% {
+    background-color: var(--tertiary-color);
+  }
+}
