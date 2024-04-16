@@ -1,0 +1,17 @@
+.spinner {
+  width: var(--size);
+  height: var(--size);
+  border: var(--border-width) solid var(--accent);
+  border-top-color: var(--brand);
+  border-radius: 50%;
+  animation: spinning 2s cubic-bezier(0.755, 0.05, 0.855, 0.06) infinite;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

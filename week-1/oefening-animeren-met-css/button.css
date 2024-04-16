@@ -1,0 +1,24 @@
+.btn {
+  --btn-width: 10rem;
+
+  padding: var(--spacing-sm) var(--spacing-base);
+  background-color: var(--brand);
+  color: var(--light);
+  border-radius: var(--size);
+  border: 0.125rem solid var(--brand);
+  min-width: var(--btn-width);
+  transition: all 0.2s linear;
+}
+
+.btn:hover {
+  color: var(--brand);
+  background-color: var(--light);
+}
+
+.btn:focus {
+  outline: var(--brand-dark) solid 0.2rem;
+}
+
+.btn:active {
+  transform: scale(0.85);
+}

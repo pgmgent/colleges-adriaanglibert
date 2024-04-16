@@ -1,0 +1,11 @@
+:root {
+  --spacing-sm: 0.5rem;
+  --spacing-base: 1rem;
+
+  --size: 1.5rem;
+  --border-width: 0.25rem;
+  --accent: hsl(0, 0%, 72%);
+  --brand: hsl(240, 100%, 50%);
+  --brand-dark: hsl(240, 100%, 30%);
+  --light: hsl(0, 0%, 100%);
+}
