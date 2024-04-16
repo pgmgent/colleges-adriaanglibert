@@ -39,7 +39,7 @@
         <form class="form" action="">
             <label class="form__group">
                 <span class="form__label">Naam</span>
-                <input class="form__input" type="text" name="name">
+                <input class="form__input" type="text" name="name" placeholder="">
             </label>
         </form>
 
@@ -48,16 +48,19 @@
         <form class="form" action="">
             <label class="form__group">
                 <span class="form__label">Achternaam</span>
-                <input type="text" class="form__input">
+                <input type="text" class="form__input" placeholder="">
             </label>
 
             <label class="form__group">
                 <span class="form__label">Email</span>
-                <input type="email" class="form__input form__input--error">
+                <input type="email" class="form__input form__input--error" placeholder="">
             </label>
 
             <ul class="form__error">
                 <li>Er is iets foutgegaan!</li>
+                <li>Dit formulier wordt gestijld omdat er minstens 1 input veld is met de
+                    <code>form__input--error</code> class. Dat kan dankzij de <code>has</code> selector.
+                </li>
             </ul>
         </form>
 

@@ -1,10 +1,29 @@
 .form {
-  max-width: 12.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--brand);
+  padding: var(--spacing-base);
 
   & .form__group {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    /***
+
+    Insane selector incoming! 🤯 Prepare to get your mind blown!
+
+    Wanneer form groep een van deze twee IS:
+    - Een form groep heeft een form input met een focus staat
+    - Een form groep heeft een form input waar de placeholder niet getoond wordt
+    DAN selecteer je hierin het form label.
+
+    ***/
+
+    &:is(:has(.form__input:focus), :has(.form__input:not(:placeholder-shown)))
+      .form__label {
+      transform: scale(0.8) translateY(-1rem);
+      color: var(--brand);
+    }
 
     & .form__label {
       position: absolute;
@@ -17,6 +36,7 @@
       padding: 0.5rem 0;
       border-bottom: 2px solid var(--dark);
       transition: border-color 0.25s linear;
+      margin-bottom: var(--spacing-md);
 
       &.form__input--error {
         border-color: var(--danger);
@@ -25,11 +45,6 @@
       &:focus {
         outline: none;
         border-color: var(--brand);
-
-        & + .form__label {
-          transform: scale(0.85) translateY(-1rem);
-          color: var(--brand);
-        }
       }
     }
   }
@@ -40,7 +55,7 @@
 }
 
 .form:has(.form__input--error) {
-  border: 1px solid red;
+  border: 1px solid var(--danger);
 }
 
 .form:has(.form__input--error) .form__error {
