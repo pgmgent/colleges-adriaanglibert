@@ -9,4 +9,5 @@
   --brand-dark: hsl(240, 100%, 30%);
   --light: hsl(0, 0%, 100%);
   --dark: hsl(0, 0%, 0%);
+  --danger: red;
 }

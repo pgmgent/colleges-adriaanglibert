@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./spinner.css">
         <link rel="stylesheet" href="./button.css">
         <link rel="stylesheet" href="./form.css">
+        <link rel="stylesheet" href="./cards.css">
     </head>
     <body>
         <h1>Oefening</h1>
@@ -37,10 +38,34 @@
 
         <form class="form" action="">
             <label class="form__group">
-                <input class="form__input" type="text" name="name">
                 <span class="form__label">Naam</span>
+                <input class="form__input" type="text" name="name">
             </label>
         </form>
+
+        <h2>Has Selector</h2>
+
+        <form class="form" action="">
+            <label class="form__group">
+                <span class="form__label">Achternaam</span>
+                <input type="text" class="form__input">
+            </label>
+
+            <label class="form__group">
+                <span class="form__label">Email</span>
+                <input type="email" class="form__input form__input--error">
+            </label>
+
+            <ul class="form__error">
+                <li>Er is iets foutgegaan!</li>
+            </ul>
+        </form>
+
+        <ul class="cards">
+            <li class="cards__card">Kaart 1</li>
+            <li class="cards__card">Kaart 2</li>
+            <li class="cards__card">Kaart 3</li>
+        </ul>
 
         <script src="./loading.js"></script>
     </body>

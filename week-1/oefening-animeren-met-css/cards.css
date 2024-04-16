@@ -1,0 +1,20 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  gap: 1rem;
+
+  & .cards__card {
+    background-color: aliceblue;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    &:hover {
+      filter: blur(0);
+    }
+  }
+
+  &:has(.cards__card:hover) .cards__card:not(:hover) {
+    filter: blur(2px);
+  }
+}

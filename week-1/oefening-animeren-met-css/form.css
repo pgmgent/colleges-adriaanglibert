@@ -18,6 +18,10 @@
       border-bottom: 2px solid var(--dark);
       transition: border-color 0.25s linear;
 
+      &.form__input--error {
+        border-color: var(--danger);
+      }
+
       &:focus {
         outline: none;
         border-color: var(--brand);
@@ -29,4 +33,16 @@
       }
     }
   }
+
+  & .form__error {
+    display: none;
+  }
+}
+
+.form:has(.form__input--error) {
+  border: 1px solid red;
+}
+
+.form:has(.form__input--error) .form__error {
+  display: block;
 }
