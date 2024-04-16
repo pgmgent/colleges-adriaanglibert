@@ -8,4 +8,5 @@
   --brand: hsl(240, 100%, 50%);
   --brand-dark: hsl(240, 100%, 30%);
   --light: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 0%);
 }

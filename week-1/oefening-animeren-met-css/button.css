@@ -12,19 +12,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.btn:hover {
-  color: var(--brand);
-  background-color: var(--light);
-}
+  &:hover {
+    color: var(--brand);
+    background-color: var(--light);
+  }
 
-.btn:focus {
-  outline: var(--brand-dark) solid 0.2rem;
-}
+  &:focus {
+    outline: var(--brand-dark) solid 0.2rem;
+  }
 
-.btn:active {
-  transform: scale(0.85);
+  &:active {
+    transform: scale(0.85);
+  }
 }
 
 .btn__text {
@@ -40,14 +40,16 @@
   transition: opacity 1s linear, visibility 0s 1s;
 }
 
-.btn--loading .btn__text {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s linear, visibility 0s linear 1s;
-}
+.btn--loading {
+  & .btn__text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s linear, visibility 0s linear 1s;
+  }
 
-.btn--loading .btn__spinner {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s linear 1s;
+  & .btn__spinner {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s linear 1s;
+  }
 }

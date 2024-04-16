@@ -1,0 +1,32 @@
+.form {
+  max-width: 12.5rem;
+
+  & .form__group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    & .form__label {
+      position: absolute;
+      transform-origin: left top;
+      transition: all 0.2s ease;
+    }
+
+    & .form__input {
+      border: none;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid var(--dark);
+      transition: border-color 0.25s linear;
+
+      &:focus {
+        outline: none;
+        border-color: var(--brand);
+
+        & + .form__label {
+          transform: scale(0.85) translateY(-1rem);
+          color: var(--brand);
+        }
+      }
+    }
+  }
+}
