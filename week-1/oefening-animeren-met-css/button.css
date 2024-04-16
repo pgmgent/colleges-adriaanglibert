@@ -8,6 +8,10 @@
   border: 0.125rem solid var(--brand);
   min-width: var(--btn-width);
   transition: all 0.2s linear;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover {
@@ -21,4 +25,29 @@
 
 .btn:active {
   transform: scale(0.85);
+}
+
+.btn__text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s linear 1s;
+}
+
+.btn__spinner {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s linear, visibility 0s 1s;
+}
+
+.btn--loading .btn__text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s linear, visibility 0s linear 1s;
+}
+
+.btn--loading .btn__spinner {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s linear 1s;
 }
