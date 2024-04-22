@@ -1,0 +1,50 @@
+:root {
+  --size: 300px;
+  --navbar-height: 5rem;
+}
+
+[data-animation="rotate"] {
+  --rotation: 0deg;
+
+  transform: rotate(var(--rotation));
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+main {
+  padding-top: var(--navbar-height);
+}
+
+.navbar {
+  position: fixed;
+  background-color: antiquewhite;
+  top: 0;
+  height: var(--navbar-height);
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  width: var(--size);
+  aspect-ratio: 1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  & .slider__slide {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 200px;
+    height: 100%;
+    outline: 1px solid red;
+  }
+  @media screen and (hover: hover) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    scroll-snap-type: none;
+    width: 100%;
+  }
+}
