@@ -1,0 +1,15 @@
+.dropdown {
+  &:focus {
+    outline: none;
+  }
+  &:focus:not(:focus-visible) {
+    // background-color: red;
+    outline: 3px solid blue;
+  }
+
+  //   &:focus-visible {
+  //     outline: 2px solid red;
+  //   }
+}
+
+// .dropdown:focus {}

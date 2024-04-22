@@ -1,0 +1,29 @@
+.list {
+  --bullet-size: 1rem;
+
+  //   list-style-type: circle;
+  //   list-style: none;
+
+  & .list__itemDELETE {
+    position: relative;
+
+    &:before {
+      content: "";
+      width: var(--bullet-size);
+      height: var(--bullet-size);
+      display: block;
+      background-color: red;
+      position: absolute;
+      left: calc(var(--bullet-size) * -1);
+    }
+  }
+
+  & .list__item {
+    &::marker {
+      content: "\f015";
+      color: red;
+      //   font-size: 3rem;
+      //   line-height: 0;
+    }
+  }
+}

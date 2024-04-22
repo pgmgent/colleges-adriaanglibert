@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Pizza Font";
+  src: url("./AROneSans-VariableFont_ARRR\,wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Pizza Font";
+  font-variation-settings: "wght" 400;
+}
+
+h1 {
+  transition: font-variation-settings 0.5s ease;
+  
+  &:hover {
+    font-variation-settings: "wght" 700;
+  }
+}
