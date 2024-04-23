@@ -1,0 +1,16 @@
+.box {
+  width: 3rem;
+  aspect-ratio: 1;
+  background-color: red;
+  animation: rotate 3s;
+  animation-timeline: view();
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

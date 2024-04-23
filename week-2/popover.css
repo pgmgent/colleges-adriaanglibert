@@ -1,0 +1,11 @@
+@supports (anchor-name: --foo) {
+  .popover-button {
+    anchor-name: --myAnchorButton;
+  }
+
+  .popover {
+    position: absolute;
+    top: anchor(--myAnchorButton top);
+    left: anchor(--myAnchorButton left);
+  }
+}
