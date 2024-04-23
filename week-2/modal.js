@@ -8,6 +8,14 @@ $modalButtons.forEach($modalButton => {
 
         if ($dialog) {
             $dialog.showModal();
+
+            const $closeButtons = $dialog.querySelectorAll("[data-function='close']");
+
+            $closeButtons.forEach($closeButton => {
+                $closeButton.addEventListener('click', () => {
+                    $dialog.close();
+                }, { once: true });
+            });
         }
     });
 });

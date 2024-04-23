@@ -1,0 +1,7 @@
+dialog {
+  border-radius: 2rem;
+
+  &::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.843);
+  }
+}
