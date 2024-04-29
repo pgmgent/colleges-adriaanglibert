@@ -1,0 +1,27 @@
+:root {
+  --size: 3rem;
+  --brand: hsl(191, 100%, 25%);
+}
+
+.box {
+  width: var(--size);
+  aspect-ratio: 1;
+  background-color: var(--brand);
+  margin-bottom: var(--size);
+  // animation: move 0.5s ease 0s 1 forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+    background-color: var(--brand);
+  }
+  50% {
+    transform: translateX(100px);
+    background-color: red;
+  }
+  100% {
+    transform: translateX(50px);
+    background-color: pink;
+  }
+}
