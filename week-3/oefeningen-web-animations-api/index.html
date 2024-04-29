@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oefeningen met Web Animations API</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <div data-animation="spinner" class="spinner"></div>
+
+        <div data-animation="rotate-animation" class="box"></div>
+        <button data-target="rotate-animation">Play rotate animation</button>
+
+        <article data-animation="stagger-animation">
+            <p>
+                Test
+            </p>
+            <p>
+                Test
+            </p>
+        </article>
+
+        <ul data-animation="stagger-animation" class="list">
+            <li>
+                <div class="box"></div>
+            </li>
+            <li>
+                <div class="box"></div>
+            </li>
+            <li>
+                <div class="box"></div>
+            </li>
+            <li>
+                <div class="box"></div>
+            </li>
+            <li>
+                <div class="box"></div>
+            </li>
+            <li>
+                <div class="box"></div>
+            </li>
+        </ul>
+
+        <button data-target="stagger-animation">Play rotate animation</button>
+
+        <script src="./app.js"></script>
+    </body>
+</html>
