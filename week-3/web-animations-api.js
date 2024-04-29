@@ -27,5 +27,8 @@ $boxes.forEach($box => {
         iterations: 1
     });
 
-    boxAnimation.pause();
-})
+    // boxAnimation.pause();
+    // boxAnimation.onfinish = () => {
+    //     alert('Het is gedaan!');
+    // }
+});
