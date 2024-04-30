@@ -1,0 +1,19 @@
+{
+  "name": "gsap-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/scripts/app.js --bundle --outfile=build/main.js",
+    "watch": "esbuild src/scripts/app.js --bundle --outdir=build --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2"
+  }
+}
