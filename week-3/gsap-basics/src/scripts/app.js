@@ -31,3 +31,41 @@ gsap.to([$boxes, 'span'], {
     }
 });
 
+// gsap.from("[data-animation='fade-items'] > *", {
+//     opacity: 0,
+//     scale: .8,
+//     yoyo: true,
+//     repeat: -1,
+//     stagger: {
+//         amount: .25,
+//         grid: "auto",
+//         from: 4,
+//     }
+// })
+
+const $gridElements = document.querySelectorAll("[data-animation='fade-items'] > *");
+
+gsap.set($gridElements, {
+    opacity: 0,
+    scale: .8
+})
+
+// gsap.fromTo($gridElements, {
+//     opacity: 0,
+//     scale: .8
+// }, {
+//     opacity: 1,
+//     scale: 1
+// })
+
+gsap.to($gridElements, {
+    opacity: 1,
+    scale: 1,
+    yoyo: true,
+    repeat: -1,
+    stagger: {
+        amount: .25,
+        grid: "auto",
+        from: 4,
+    }
+})

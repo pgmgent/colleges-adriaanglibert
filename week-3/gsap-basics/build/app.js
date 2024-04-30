@@ -4290,6 +4290,22 @@
       });
     }
   });
+  var $gridElements = document.querySelectorAll("[data-animation='fade-items'] > *");
+  gsapWithCSS.set($gridElements, {
+    opacity: 0,
+    scale: 0.8
+  });
+  gsapWithCSS.to($gridElements, {
+    opacity: 1,
+    scale: 1,
+    yoyo: true,
+    repeat: -1,
+    stagger: {
+      amount: 0.25,
+      grid: "auto",
+      from: 4
+    }
+  });
 })();
 /*! Bundled license information:
 

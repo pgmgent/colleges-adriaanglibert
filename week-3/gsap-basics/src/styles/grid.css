@@ -1,0 +1,22 @@
+:root {
+  --background-color: hsl(208, 100%, 91%);
+  --foreground-color: #ffffff;
+  --dark-color: hsla(0, 0%, 46%, 0.359);
+  --spacing: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: var(--spacing);
+  padding: var(--spacing);
+  background-color: var(--background-color);
+
+  & .grid__item {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--foreground-color);
+    border-radius: var(--spacing);
+    box-shadow: 2px 2px 4px var(--dark-color);
+  }
+}
