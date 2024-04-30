@@ -1,0 +1,6 @@
+.box {
+  width: 3rem;
+  aspect-ratio: 1;
+  background-color: red;
+  margin-bottom: 1rem;
+}

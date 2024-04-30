@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/scripts/app.js --bundle --outfile=build/main.js",
+    "build": "esbuild src/scripts/app.js --bundle --outdir=build",
     "watch": "esbuild src/scripts/app.js --bundle --outdir=build --watch"
   },
   "keywords": [],
