@@ -1,0 +1,19 @@
+.row {
+  min-height: 40vh;
+  min-height: 40svh;
+
+  background-color: bisque;
+  margin-bottom: 1rem;
+}
+
+.box,
+.circle {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  background-color: cadetblue;
+  margin-bottom: 1rem;
+}
+
+.circle {
+  border-radius: 2rem;
+}
