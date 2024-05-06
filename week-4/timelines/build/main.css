@@ -1,0 +1,31 @@
+/* src/styles/components/box.css */
+.box {
+  width: var(--dimensions);
+  background-color: var(--primary-color);
+  aspect-ratio: 1;
+  border-radius: var(--radius-base);
+  &.box--secondary {
+    background-color: var(--secondary-color);
+  }
+  &.box--dark {
+    background-color: var(--dark-color);
+  }
+}
+
+/* src/styles/app.css */
+:root {
+  --dimensions: 4rem;
+  --spacing-base: 1rem;
+  --radius-base: 0.5rem;
+  --primary-color: hsl(120, 69%, 80%);
+  --secondary-color: hsl(39, 100%, 65%);
+  --dark-color: hsl(0, 0%, 51%);
+}
+body {
+  font-family: sans-serif;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+}

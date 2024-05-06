@@ -1,0 +1,14 @@
+.box {
+  width: var(--dimensions);
+  background-color: var(--primary-color);
+  aspect-ratio: 1;
+  border-radius: var(--radius-base);
+
+  &.box--secondary {
+    background-color: var(--secondary-color);
+  }
+
+  &.box--dark {
+    background-color: var(--dark-color);
+  }
+}
