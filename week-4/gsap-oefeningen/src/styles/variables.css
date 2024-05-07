@@ -2,6 +2,10 @@
   --width: 36rem;
   --size: 5rem;
 
+  --font-sm: 0.85rem;
+
+  --radius-base: 0.5rem;
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 0.85rem;
   --spacing-base: 1rem;
@@ -9,9 +13,14 @@
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
 
+  --hamburger-size: 1.5rem;
+  --hamburger-line-width: 3px;
+
   --primary-color: hsl(300, 100%, 15%);
   --secondary-color: hsl(190, 100%, 62%);
+  --tertiary-color: hsl(34, 100%, 55%);
 
+  --bright: hsl(0, 0%, 100%);
   --light: hsl(0, 0%, 91%);
   --dark: hsl(0, 0%, 10%);
 }

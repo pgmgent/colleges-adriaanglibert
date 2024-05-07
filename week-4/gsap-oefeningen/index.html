@@ -24,23 +24,129 @@
                 <h2>Delay between animations</h2>
             </header>
 
-            <div class="container container--primary">
-                <button data-target="stagger-fade-children">Opnieuw</button>
-                <button data-target="stagger-fade-children">Verbergen</button>
+            <div data-animation="stagger-parent" class="container container--primary">
+                <button data-restart>Opnieuw</button>
+                <button data-reverse>Verbergen</button>
 
                 <ul data-animation="stagger-fade-children" class="row">
                     <li class="card">
                         <img class="card__image" src="https://picsum.photos/id/1020/600/400">
 
-                        <strong class="card__title">Quisque rhoncus</strong>
+                        <div class="card__inner">
+                            <strong class="card__title">Quisque rhoncus</strong>
 
-                        <p class="card__description">
-                            Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta ac,
-                            dignissim id ligula.
-                        </p>
+                            <p class="card__description">
+                                Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac,
+                                dignissim id ligula.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/980/600/400">
+
+                        <div class="card__inner">
+                            <strong class="card__title">Viverra non hendrerit</strong>
+
+                            <p class="card__description">
+                                Interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac,
+                                dignissim id ligula.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/1000/600/400">
+
+                        <div class="card__inner">
+                            <strong class="card__title">ignissim id ligula</strong>
+
+                            <p class="card__description">
+                                Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/1020/600/400">
+
+                        <div class="card__inner">
+                            <strong class="card__title">Quisque rhoncus</strong>
+
+                            <p class="card__description">
+                                Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac,
+                                dignissim id ligula.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/980/600/400">
+
+                        <div class="card__inner">
+                            <strong class="card__title">Viverra non hendrerit</strong>
+
+                            <p class="card__description">
+                                Interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac,
+                                dignissim id ligula.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/1000/600/400">
+
+                        <div class="card__inner">
+                            <strong class="card__title">ignissim id ligula</strong>
+
+                            <p class="card__description">
+                                Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta
+                                ac.
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section>
+            <header>
+                <h2>Opeenvolgende tweens</h2>
+            </header>
+
+            <div class="container container--high">
+                <button data-target="timeline-morph">Restart</button>
+
+                <div class="row">
+                    <div data-animation="timeline-morph" class="box box--tertiary"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <h2>Dropdown</h2>
+
+                <div class="container container--light container--high">
+                    <div class="navbar">
+                        <button data-dropdown-target="nav-items" class="hamburger navbar__menu">
+                            <span class="hamburger__line" aria-hidden="true"></span>
+                            <span class="hamburger__line" aria-hidden="true"></span>
+                            <span class="hamburger__line" aria-hidden="true"></span>
+                            <span class="sr-only">Menu</span>
+                        </button>
+
+                        <nav data-dropdown="nav-items" class="navbar__dropdown">
+                            <ul class="navbar__list">
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                                <li>Item 4</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
         </section>
 
         <script type="module" src="./build/app.js"></script>

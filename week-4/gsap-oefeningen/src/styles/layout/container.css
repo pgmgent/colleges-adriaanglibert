@@ -2,8 +2,13 @@
   max-width: var(--width);
   padding: var(--spacing-base);
   margin: var(--spacing-lg) 0;
+  background-color: var(--primary-color);
 
-  &.container--primary {
-    background-color: var(--primary-color);
+  &.container--light {
+    background-color: var(--light);
+  }
+
+  &.container--high {
+    min-height: 21rem;
   }
 }

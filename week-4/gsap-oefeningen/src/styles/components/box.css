@@ -6,4 +6,8 @@
   aspect-ratio: 1;
   background-color: var(--secondary-color);
   border: none;
+
+  &.box--tertiary {
+    background-color: var(--tertiary-color);
+  }
 }

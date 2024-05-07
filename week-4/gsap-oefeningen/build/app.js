@@ -4281,8 +4281,73 @@
   };
   var rotate_default = initRotateAnimation;
 
+  // src/scripts/animations/fade-in-up.js
+  var initStaggerFade = () => {
+    const $parents = document.querySelectorAll("[data-animation='stagger-parent']");
+    $parents.forEach(($parent) => {
+      const $restartButton = $parent.querySelector("[data-restart]");
+      const $reverseButton = $parent.querySelector("[data-reverse]");
+      const $children = $parent.querySelector("[data-animation='stagger-fade-children']").children;
+      const fadeInUpAnimation = gsapWithCSS.from($children, {
+        autoAlpha: 0,
+        y: 30,
+        stagger: 0.25
+      });
+      $restartButton.addEventListener("click", () => {
+        fadeInUpAnimation.restart();
+      });
+      $reverseButton.addEventListener("click", () => {
+        fadeInUpAnimation.reverse();
+      });
+    });
+  };
+  var fade_in_up_default = initStaggerFade;
+
+  // src/scripts/animations/morph.js
+  var secondaryColor = getComputedStyle(document.documentElement).getPropertyValue("--secondary-color");
+  var initMorphAnimation = () => {
+    const $startButton = document.querySelector("[data-target='timeline-morph']");
+    const $morphTarget = document.querySelector(`[data-animation='${$startButton.dataset.target}']`);
+    const morphAnimationTimeline = gsapWithCSS.timeline({
+      repeat: 1,
+      yoyo: true,
+      defaults: { duration: 0.5 }
+    });
+    morphAnimationTimeline.to($morphTarget, { y: 200 }).to($morphTarget, { x: 300 }).to($morphTarget, { backgroundColor: secondaryColor }).to($morphTarget, {
+      rotate: "180deg",
+      borderRadius: "50%"
+    }).to($morphTarget, { scale: 2 });
+    $startButton.addEventListener("click", () => {
+      morphAnimationTimeline.restart();
+    });
+  };
+  var morph_default = initMorphAnimation;
+
+  // src/scripts/animations/dropdown.js
+  var initDropdowns = () => {
+    const $triggers = document.querySelectorAll("[data-dropdown-target]");
+    $triggers.forEach(($trigger) => {
+      const $target = document.querySelector(`[data-dropdown='${$trigger.getAttribute("data-dropdown-target")}']`);
+      gsapWithCSS.set($target, {
+        autoAlpha: 0
+      });
+      const dropdownTimeline = gsapWithCSS.timeline({ paused: true });
+      dropdownTimeline.to($trigger, { rotate: 360 }).to($target, { autoAlpha: 1 }).from($target.querySelectorAll("li"), { opacity: 0, x: 20, ease: "power2.inOut", stagger: 0.2 }, ">-.5");
+      $trigger.addEventListener("click", () => {
+        if (dropdownTimeline.progress()) {
+          return dropdownTimeline.reverse();
+        }
+        return dropdownTimeline.play();
+      });
+    });
+  };
+  var dropdown_default = initDropdowns;
+
   // src/scripts/app.js
   rotate_default();
+  fade_in_up_default();
+  morph_default();
+  dropdown_default();
 })();
 /*! Bundled license information:
 
