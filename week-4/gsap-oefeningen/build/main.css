@@ -1,0 +1,49 @@
+/* src/styles/variables.css */
+:root {
+  --width: 36rem;
+  --size: 5rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.85rem;
+  --spacing-base: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --primary-color: hsl(300, 100%, 15%);
+  --secondary-color: hsl(190, 100%, 62%);
+  --light: hsl(0, 0%, 91%);
+  --dark: hsl(0, 0%, 10%);
+}
+
+/* src/styles/layout/container.css */
+.container {
+  max-width: var(--width);
+  padding: var(--spacing-base);
+  margin: var(--spacing-lg) 0;
+  &.container--primary {
+    background-color: var(--primary-color);
+  }
+}
+
+/* src/styles/layout/row.css */
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* src/styles/components/box.css */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  aspect-ratio: 1;
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+/* src/styles/components/card.css */
+
+/* src/styles/app.css */
+body {
+  font-family: sans-serif;
+}

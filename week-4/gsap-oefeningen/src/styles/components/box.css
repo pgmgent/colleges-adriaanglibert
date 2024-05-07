@@ -1,0 +1,9 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  aspect-ratio: 1;
+  background-color: var(--secondary-color);
+  border: none;
+}

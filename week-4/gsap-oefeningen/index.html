@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starter ESBuild</title>
+        <link rel="stylesheet" href="./build/main.css">
+    </head>
+    <body>
+        <h1>GSAP Oefeningen</h1>
+
+        <section>
+            <header>
+                <h2>Tween</h2>
+            </header>
+
+            <div class="container container--primary">
+                <button data-animation="rotate" class="box">Klik op mij!</button>
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <h2>Delay between animations</h2>
+            </header>
+
+            <div class="container container--primary">
+                <button data-target="stagger-fade-children">Opnieuw</button>
+                <button data-target="stagger-fade-children">Verbergen</button>
+
+                <ul data-animation="stagger-fade-children" class="row">
+                    <li class="card">
+                        <img class="card__image" src="https://picsum.photos/id/1020/600/400">
+
+                        <strong class="card__title">Quisque rhoncus</strong>
+
+                        <p class="card__description">
+                            Viverra non hendrerit sit amet, interdum et erat. Sed urna ipsum, pharetra quis porta ac,
+                            dignissim id ligula.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <script type="module" src="./build/app.js"></script>
+    </body>
+</html>

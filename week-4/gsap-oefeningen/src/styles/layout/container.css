@@ -1,0 +1,9 @@
+.container {
+  max-width: var(--width);
+  padding: var(--spacing-base);
+  margin: var(--spacing-lg) 0;
+
+  &.container--primary {
+    background-color: var(--primary-color);
+  }
+}
