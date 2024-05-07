@@ -1,0 +1,7 @@
+.box {
+  --size: 3rem;
+
+  width: var(--size);
+  aspect-ratio: 1;
+  background-color: hsl(0, 100%, 50%);
+}
