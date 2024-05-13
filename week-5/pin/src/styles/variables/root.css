@@ -1,0 +1,5 @@
+:root {
+  --primary: hsl(300, 100%, 25%);
+  --secondary: hsl(350, 100%, 88%);
+  --dark: hsl(0, 0%, 0%);
+}

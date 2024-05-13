@@ -1,0 +1,13 @@
+.section {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--primary);
+  border: 1px solid var(--dark);
+
+  & .section__left,
+  & .section__right {
+    width: 50%;
+    border: 1px solid var(--secondary);
+  }
+}
