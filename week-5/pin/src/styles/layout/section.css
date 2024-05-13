@@ -4,6 +4,7 @@
   min-height: 100svh;
   background-color: var(--primary);
   border: 1px solid var(--dark);
+  // overflow-x: auto;
 
   & .section__left,
   & .section__right {

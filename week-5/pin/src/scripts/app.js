@@ -1,3 +1,6 @@
 import gsap from "gsap";
+import initPin from "./animations/pin";
+import initHorizontalScroll from "./animations/horizontal";
 
-console.log('Javascript loaded!');      
+initPin();
+initHorizontalScroll();
