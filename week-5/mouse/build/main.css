@@ -1,0 +1,14 @@
+/* src/styles/components/mouse.css */
+.mouse {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+}
+
+/* src/styles/app.css */
+body {
+  font-family: sans-serif;
+}
