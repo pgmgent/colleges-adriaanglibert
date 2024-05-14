@@ -6622,9 +6622,10 @@
         trigger: triggerElement,
         start: "50% 50%",
         end: "75% 25%",
-        scrub: true,
+        // scrub: true,
         markers: true,
-        pin: true
+        toggleActions: "play pause resume reverse"
+        // pin: true,
       }
     });
   };

@@ -6632,24 +6632,41 @@
     const $scrollContainers = document.querySelectorAll("[data-animation='horizontal-scroll']");
     $scrollContainers.forEach(($scrollContainer) => {
       const $scrollElement = $scrollContainer.querySelector("[data-element='horizontal-element']");
-      const getScrollAmount = () => {
-        const windowWidth = window.innerWidth;
-        const elementWidth = $scrollElement.offsetWidth;
-        return elementWidth - windowWidth;
-      };
-      const scrollAnimation = gsapWithCSS.to($scrollElement, {
-        x: getScrollAmount() * -1
-      });
-      ScrollTrigger2.create({
-        animation: scrollAnimation,
-        scrub: true,
-        trigger: $scrollContainer,
-        pin: true,
-        start: "0% 0%",
-        end: () => `+=${getScrollAmount()}`,
-        invalidateOnRefresh: true,
-        markers: true
-      });
+      const $scrollChildren = $scrollElement.children;
+      if (!$scrollContainer.classList.contains("section--scroll")) {
+        const getScrollAmount = () => {
+          const windowWidth = window.innerWidth;
+          const elementWidth = $scrollElement.offsetWidth;
+          return elementWidth - windowWidth;
+        };
+        const scrollAnimation = gsapWithCSS.to($scrollElement, {
+          x: getScrollAmount() * -1
+        });
+        ScrollTrigger2.create({
+          animation: scrollAnimation,
+          scrub: true,
+          trigger: $scrollContainer,
+          pin: true,
+          start: "0% 0%",
+          end: () => `+=${getScrollAmount()}`,
+          invalidateOnRefresh: true
+          // markers: true
+        });
+        Array.from($scrollChildren).forEach(($scrollChild) => {
+          console.log($scrollChild);
+          gsapWithCSS.from($scrollChild, {
+            opacity: 0,
+            scrollTrigger: {
+              trigger: $scrollChild,
+              containerAnimation: scrollAnimation,
+              toggleActions: "play pause resume reset",
+              onEnter: () => {
+                alert("Hallo");
+              }
+            }
+          });
+        });
+      }
     });
   };
   var horizontal_default = initHorizontalScroll;
