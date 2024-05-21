@@ -1,0 +1,43 @@
+@import "https://db.onlinewebfonts.com/c/0c724f6aa457310440cf8949c615cbd7?family=Star+Jedi+V2";
+
+/* src/styles/abstracts/variables.css */
+:root {
+  --dark: hsl(0, 0%, 15%);
+  --light: hsl(0, 0%, 95%);
+  --container-width: 1024px;
+  --spacing-base: 2rem;
+}
+
+/* src/styles/layout/container.css */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-base);
+}
+
+/* src/styles/layout/columns.css */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  & .columns__section {
+    display: flex;
+    align-items: center;
+    min-height: 100svh;
+    &.columns__section--top {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+/* src/styles/app.css */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+h1,
+h2 {
+  font-family: "Star Jedi V2", sans-serif;
+}

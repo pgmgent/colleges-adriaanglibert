@@ -1,0 +1,5 @@
+:root {
+  --size: 3rem;
+  --primary: hsl(22, 100%, 66%);
+  --secondary: hsl(240, 100%, 71%);
+}

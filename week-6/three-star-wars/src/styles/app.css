@@ -1,0 +1,16 @@
+@import url("./abstracts/variables.css");
+@import url("./layout/container.css");
+@import url("./layout/columns.css");
+@import url("https://db.onlinewebfonts.com/c/0c724f6aa457310440cf8949c615cbd7?family=Star+Jedi+V2");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Star Jedi V2", sans-serif;
+}

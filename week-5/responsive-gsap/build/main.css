@@ -1,0 +1,26 @@
+/* src/styles/abstracts/variables.css */
+:root {
+  --size: 3rem;
+  --primary: hsl(22, 100%, 66%);
+  --secondary: hsl(240, 100%, 71%);
+}
+
+/* src/styles/components/box.css */
+.box {
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--primary);
+}
+
+/* src/styles/components/circle.css */
+.circle {
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--secondary);
+  border-radius: var(--size);
+}
+
+/* src/styles/app.css */
+body {
+  font-family: sans-serif;
+}

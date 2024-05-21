@@ -1,0 +1,15 @@
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+
+  & .columns__section {
+    display: flex;
+    align-items: center;
+    min-height: 100svh;
+
+    &.columns__section--top {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
