@@ -1,0 +1,7 @@
+@import url("./abstracts/variables.css");
+@import url("./components/box.css");
+@import url("./components/circle.css");
+
+body {
+  font-family: sans-serif;
+}

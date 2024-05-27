@@ -1,0 +1,5 @@
+.box {
+  width: var(--medium-size);
+  aspect-ratio: 1;
+  background-color: var(--primary);
+}

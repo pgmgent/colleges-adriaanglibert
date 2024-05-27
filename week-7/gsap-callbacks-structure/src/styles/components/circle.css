@@ -1,0 +1,6 @@
+.circle {
+  width: var(--medium-size);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: var(--primary);
+}

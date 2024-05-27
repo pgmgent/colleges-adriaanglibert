@@ -1,0 +1,28 @@
+/* src/styles/abstracts/variables.css */
+:root {
+  --medium-size: 5rem;
+  --spacing-base: 1rem;
+  --light: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 0%);
+  --primary: hsl(200, 100%, 50%);
+}
+
+/* src/styles/components/box.css */
+.box {
+  width: var(--medium-size);
+  aspect-ratio: 1;
+  background-color: var(--primary);
+}
+
+/* src/styles/components/circle.css */
+.circle {
+  width: var(--medium-size);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: var(--primary);
+}
+
+/* src/styles/app.css */
+body {
+  font-family: sans-serif;
+}
