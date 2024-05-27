@@ -1,0 +1,7 @@
+:root {
+  --medium-height: 5rem;
+  --spacing-base: 1rem;
+  --light: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 0%);
+  --primary: hsl(200, 100%, 50%);
+}

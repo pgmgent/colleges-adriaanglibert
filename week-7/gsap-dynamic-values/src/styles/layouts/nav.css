@@ -1,0 +1,15 @@
+.navbar {
+  --nav-background: var(--dark);
+  --nav-color: var(--light);
+
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  min-height: var(--medium-height);
+
+  background-color: var(--nav-background);
+  color: var(--nav-color);
+}

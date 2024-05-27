@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild app=src/scripts/app.js main=src/styles/app.css --bundle --outdir=build --public-path=public",
-    "watch": "esbuild app=src/scripts/app.js main=src/styles/app.css --bundle --outdir=build --watch --public-path=public"
+    "watch": "esbuild app=src/scripts/app.js main=src/styles/app.css --bundle --outdir=build --watch --public-path=public --loader:.otf=file"
   },
   "keywords": [],
   "author": "",

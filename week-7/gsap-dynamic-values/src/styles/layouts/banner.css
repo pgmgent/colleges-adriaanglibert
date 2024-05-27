@@ -1,0 +1,6 @@
+.banner {
+  --bg-color: var(--primary);
+
+  min-height: 80svh;
+  background-color: var(--bg-color);
+}

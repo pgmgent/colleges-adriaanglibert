@@ -1,0 +1,45 @@
+/* src/styles/abstracts/variables.css */
+:root {
+  --medium-height: 5rem;
+  --spacing-base: 1rem;
+  --light: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 0%);
+  --primary: hsl(200, 100%, 50%);
+}
+
+/* src/styles/abstracts/typography.css */
+h2 {
+  margin: 0;
+  padding: var(--spacing-base);
+}
+
+/* src/styles/layouts/banner.css */
+.banner {
+  --bg-color: var(--primary);
+  min-height: 80svh;
+  background-color: var(--bg-color);
+}
+
+/* src/styles/layouts/nav.css */
+.navbar {
+  --nav-background: var(--dark);
+  --nav-color: var(--light);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  min-height: var(--medium-height);
+  background-color: var(--nav-background);
+  color: var(--nav-color);
+}
+
+/* src/styles/app.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+main {
+  margin-top: var(--medium-height);
+}

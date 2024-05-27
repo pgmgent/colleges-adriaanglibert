@@ -1,0 +1,13 @@
+@import url("./abstracts/variables.css");
+@import url("./abstracts/typography.css");
+@import url("./layouts/banner.css");
+@import url("./layouts/nav.css");
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  margin-top: var(--medium-height);
+}
